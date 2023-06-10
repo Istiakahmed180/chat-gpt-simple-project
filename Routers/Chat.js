@@ -1,7 +1,10 @@
 const express = require("express");
 require("dotenv").config();
 const { Configuration, OpenAIApi } = require("openai");
+const cors = require("cors");
 const Chat = express.Router();
+
+Chat.use(cors());
 
 // Set up OpenAI configuration
 const configuration = new Configuration({
